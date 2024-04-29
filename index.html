@@ -7,27 +7,33 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Kalkulator Suhu <span class="watermark">by Hugo</span></h1>
-        
-        <div class="form-group">
-            <label for="celsius">Celcius (°C):</label>
-            <input type="number" id="celsius" placeholder="Masukkan suhu °C">
-        </div>
-
-        <div class="button-group">
-            <button onclick="convertToFar()" id="convertBtn">Konversi</button>
-            <button onclick="resetForm()">Reset</button>
-            <button onclick="reverseConversion()">Reverse</button>
-        </div>
-
-        <div class="form-group">
-            <label for="fahrenheit">Fahrenheit (°F):</label>
-            <input type="number" id="fahrenheit" placeholder="Hasil konversi °F" readonly>
-        </div>
-
-        <div class="explanation">
-            <p id="explanationText"></p>
+    <div class="box">
+        <div class="container">
+            <!-- isi content -->
+            <h1>Kalkulator Suhu <span class="watermark">by Hugo</span></h1>
+    
+            <div class="form-group">
+                <label for="temperature">Masukkan suhu:</label>
+                <input type="number" id="temperature" placeholder="Masukkan suhu">
+            </div>
+    
+            <div class="form-group">
+                <label for="unit">Pilih satuan suhu:</label>
+                <select id="unit">
+                    <option value="celsius">Celcius (°C)</option>
+                    <option value="fahrenheit">Fahrenheit (°F)</option>
+                    <option value="kelvin">Kelvin (K)</option>
+                </select>
+            </div>
+    
+            <div class="button-group">
+                <button onclick="convertTemperature()">Konversi</button>
+                <button onclick="resetForm()">Reset</button>
+            </div>
+    
+            <div class="result">
+                <p id="resultText"></p>
+            </div>
         </div>
     </div>
 
